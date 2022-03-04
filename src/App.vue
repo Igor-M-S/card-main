@@ -11,12 +11,19 @@
     </q-header>
 
     
-    <q-page-container>
+    <q-page-container >
+      <div class="back">
       <HelloWorld />
+      </div>
     </q-page-container>
     
   </q-layout>
 </template>
+<style scoped>
+
+
+</style>
+
 
 <script>
 import { ref } from 'vue'

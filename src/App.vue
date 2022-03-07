@@ -1,22 +1,16 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="glossy">
+  <q-layout class="body">
+    <q-header>
       <q-toolbar>
         <q-toolbar-title>
-          Quasar App
+          Carrinho de compras
         </q-toolbar-title>
-
-
       </q-toolbar>
     </q-header>
 
-    
-    <q-page-container >
-      <div class="back">
-      <HelloWorld />
-      </div>
+    <q-page-container>
+      <Page />
     </q-page-container>
-    
   </q-layout>
 </template>
 <style scoped>
@@ -26,21 +20,16 @@
 
 
 <script>
-import { ref } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Page from './views/page.vue'
+//import total from './components/total-price-price.vue'
+
 
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    HelloWorld,
-},
-
-  setup () {
-    return {
-      leftDrawerOpen: ref(false)
-    }
-  }
+    Page,
+}
 }
 </script>

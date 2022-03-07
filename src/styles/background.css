@@ -3,13 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'poppins',sans-serif;
+  
 }
 .body{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(#53a9e2, #e2e671);
+background: linear-gradient(#53a9e2, #e2e671);
 }
 .my-card{
   width: 100%;
@@ -21,6 +18,7 @@
 }
 .q-pa-md{
   justify-content:  space-between;
+   
 }
 .imgg{
   font-weight: "normal";
@@ -40,47 +38,37 @@
   font-family: Helvetica, sans-serif;
   font-weight: bold;
   font-size: 14px;
-  position: relative;
-  top: -10px;
+  /*position: relative;
+  top: -10px;*/
   
   
   
 }
-.boton1{
-  position: absolute;
-  top: 1px;
-
-}
-.boton2{
+/*.boton2{
   position: absolute;
   top: 40px;
-}
-.boton4{
-  
-  position: absolute;
-  top: 10px;
-  
-}
-.b4{
+}*/
+
+/*.b4{
 font-size: 40px;
 color: black;
 position: absolute;
 top: 20px;
-}
-.boton3{
+}*/
+/*.boton3{
   position: absolute;
   top: 79px;
 
-}
+}*/
 
-.preço{ 
+.preco{ 
   font-family: Helvetica, sans-serif;
   font-weight: bold;
   font-size: 16px;
   align-items: center;
-  position: absolute; 
-	left: 140px; /* posiciona para a esquerda */ 
-	top: 1px; /* posiciona para baixo */
+  /*position: absolute;*/ 
+	/*left: 140px; 
+	top: 1px;*/
 	color: #c504ab;
   
 }
@@ -89,8 +77,8 @@ top: 20px;
   font-weight: bold;
   font-size: 30px;
   align-items: center;
-  position: absolute;
-  top: 1px;
+  /*position: absolute;
+  top: 1px;*/
 	color: #c504ab;
 
 }

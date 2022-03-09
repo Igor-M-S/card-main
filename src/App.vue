@@ -6,22 +6,17 @@
           Carrinho de compras
         </q-toolbar-title>
       </q-toolbar>
-    </q-header>
-
+      </q-header>
+    
     <q-page-container>
-      <Page />
+      <Navbar />
     </q-page-container>
   </q-layout>
 </template>
 <style scoped>
-
-
 </style>
-
-
 <script>
-import Page from './views/page.vue'
-//import total from './components/total-price-price.vue'
+import Navbar from './components/Navbar.vue'
 
 
 
@@ -29,7 +24,7 @@ export default {
   name: 'LayoutDefault',
 
   components: {
-    Page,
+    Navbar,
 }
 }
 </script>

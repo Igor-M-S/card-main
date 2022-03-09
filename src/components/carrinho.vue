@@ -20,8 +20,10 @@
             </q-item>
             
             <q-separator />
-        
-            <q-card-section q-pa-md v-for="(item, del) in items" :key="item.message" horizontal>
+
+            <div q-pa-md v-for="(item, del) in items" :key="item.message">
+
+            <q-card-section  horizontal>
                 
                 <div >
                     <img
@@ -38,7 +40,6 @@
 
                 <q-separator vertical/>
                 
-                
                 <q-card-section horizontal>
                     <div>
                         <p class="preco">R${{ item.preco }},00</p>
@@ -47,10 +48,11 @@
             
                 </q-card-section>
                 
-
-<q-separator horizontal/>
-             
             </q-card-section>
+
+        <q-separator />
+        
+            </div>
             
         </q-card>
     </div>

@@ -9,7 +9,7 @@
 
       <q-separator />
       <q-card-section>
-          <p class="preço2">R$80,00</p>
+          <p class="preço2">{{ total }}</p>
       </q-card-section>
       <q-separator />
       
@@ -22,6 +22,24 @@
 </template>
 
 <script>
+import { itensStores } from '../stores/itens'
+
+export default{
+    setup() {
+    const store = itensStores()
+    return {
+    items: store.items
+    }
+
+},
+    computed: {
+    total: function() {
+        
+        return this.items.reduce((total, p) => total + p.preco, 0);
+
+    }
+    }
+}
 </script>
 
 <style>

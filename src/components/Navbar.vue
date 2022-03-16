@@ -8,5 +8,14 @@
   <router-view />
 </template>
 <script>
+import { itensStores } from "../stores/itens"
 
+  export default {
+    setup() {
+      const store = itensStores()
+      return {
+        totalCarrinho: store.itemsCarrinho.length
+      }
+    }
+  }
 </script>

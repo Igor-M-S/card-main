@@ -21,7 +21,7 @@
             
             <q-separator />
 
-            <div q-pa-md v-for="(item, del) in items" :key="item.message">
+            <div q-pa-md v-for="(item, del) in itemsCarrinho" :key="item.message">
 
             <q-card-section  horizontal>
                 
@@ -58,20 +58,25 @@
     </div>
 </template>
 <script>
+
+import { onMounted, ref } from "vue";
 import { itensStores } from '../stores/itens'
 export default{
 
 setup() {
     const store = itensStores()
-    return {
-    items: store.items
-    }
+    const itemsCarrinho = ref([]);
+
+        onMounted(() =>{
+            itemsCarrinho.value = store.itemsCarrinho
+        })
+    
 
 },
 
     methods: {
     remover: function (del) {
-      this.items.splice(del,1);
+      this.itemsCarrinho.splice(del,1);
     }
   }
 }

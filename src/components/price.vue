@@ -9,7 +9,7 @@
 
       <q-separator />
       <q-card-section>
-          <p class="preço2">{{ total }}</p>
+          <p class="preço2">{{ total }},00</p>
       </q-card-section>
       <q-separator />
       
@@ -28,14 +28,14 @@ export default{
     setup() {
     const store = itensStores()
     return {
-    items: store.items
+    itemsCarrinho: store.itemsCarrinho
     }
 
 },
     computed: {
     total: function() {
         
-        return this.items.reduce((total, p) => total + p.preco, 0);
+        return this.itemsCarrinho.reduce((total, p) => total + p.preco, 0);
 
     }
     }

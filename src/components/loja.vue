@@ -1,8 +1,14 @@
 <template>
   <div>
-    <div q-pa-md v-for="(item) in items" :key="item.message " class="q-pa-md row items-start q-gutter-md">
+    <div q-pa-md  class="q-pa-md row items-start q-gutter-md">
         
-        <q-card flat bordered class="my-card" style="max-width: 300px">
+        <q-card 
+            flat bordered class="my-card" 
+            v-for="(item) in items" 
+            :key="item.message" 
+            style="max-width: 250px"
+        >
+
             <q-card-section vertical>
                 <div >
                     <img
@@ -13,7 +19,7 @@
                 </div>
 
                 <q-separator horizontal/> 
-
+                
                 <q-card-section>
                     <p class="descricao">{{ item.message }}</p>
                 </q-card-section>
@@ -50,7 +56,7 @@ components: {
 setup() {
     const store = itensStores()
     return {
-    items: store.items
+    items: store.itemsEstoque
     }
 
 },
